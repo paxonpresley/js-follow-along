@@ -51,7 +51,7 @@ const menu = [
 ];
 
 const itemsContainer = document.querySelector('.items-container');
-const btnContainer = document.querySelector('btn-container');
+const fiterBtns = document.querySelectorAll('filter-btn');
 
 // todo: when the page loads you need the items to display themselves in the correct divs
 // * window variable means the entire page. then a addEventListener listens for whatever the next command is (- ex: DOMContentLoaded or click within parenthesis -)
@@ -104,8 +104,6 @@ function displayProducts(menuProducts) {
         </div>
     </article>`;
     });
-
     displayItems = displayItems.join("")
-
     itemsContainer.innerHTML = displayItems;
 };
