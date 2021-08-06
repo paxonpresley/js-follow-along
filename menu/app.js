@@ -48,6 +48,14 @@ const menu = [
         img: "./assets/tea.jpeg",
         desc: 'akfjah;dkfjhadlkf adfkjhald fadhfl askjdfhlas dflka dlkfjhasldjhfsd',
     },
+    {
+        id: 7,
+        title: "Dragon Smoothie",
+        category: "smoothie",
+        price: 80.22,
+        img: "./assets/smoothie.png",
+        desc: 'akfjah;dkfjhadlkf adfkjhald fadhfl askjdfhlas dflka dlkfjhasldjhfsd dkfjhadlkf adfkjhald fadhfl dkfjhadlkf adfkjhald fadhfl',
+    },
 ];
 
 const itemsContainer = document.querySelector('.items-container');
@@ -105,6 +113,7 @@ function displayProducts(menuProducts) {
     </article>`;
     });
     displayItems = displayItems.join("")
+    // * items container specifies the div, innerhtml returns the function, the function adds the article
     itemsContainer.innerHTML = displayItems;
 };
 
