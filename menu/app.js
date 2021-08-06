@@ -113,6 +113,21 @@ filterBtns.forEach(function(filterBtn){
     // * now add a eventlistener
     filterBtn.addEventListener('click', function(e){
         // ! currentTarget.dataset is going to allow you to set a data value to an html element. in this case it's set to a button event
-        console.log(e.currentTarget.dataset.category);
+        // console.log(e.currentTarget.datdset.category);
+        const category = e.currentTarget.dataset.category;
+        // * displayProducts is looking for an array to filter so you need to create a new array. use .filter to filter what you want to grab out of the array using an if function
+        const itemsCategory = menu.filter(function(menuItem){
+            // console.log(menuItem.category);
+            if(menuItem.category === category) {
+                return menuItem;
+            }
+        });
+        if(category == 'all') {
+            displayProducts(menu);
+        }
+        else {
+            displayProducts(itemsCategory);
+        };
+        // displayProducts(itemsCategory);
     });
 });
