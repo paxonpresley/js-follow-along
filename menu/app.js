@@ -52,10 +52,13 @@ const menu = [
 
 const itemsContainer = document.querySelector('.items-container');
 
-// * when the page loads you need the items to display themselves in the correct divs
-//  window variable means the entire page. then a addEventListener listens for whatever the next command is (- ex: DOMContentLoaded or click within parenthesis -)
-// the function(menu) means you are running a function, the menu is a callback to the array called menu 
-window.addEventListener('DOMContentLoaded', function(menu){
+// todo: when the page loads you need the items to display themselves in the correct divs
+// * window variable means the entire page. then a addEventListener listens for whatever the next command is (- ex: DOMContentLoaded or click within parenthesis -)
+window.addEventListener('DOMContentLoaded', function(){
     // console.log('sfdasfda');
-    
+    // * let means it's able to change it's value. next is the name you want to call it, the menu is the array you want to take data from, j
+    let displayItems = menu.map(function(item){
+        // console.log(item);
+    });
+    // console.log(displayItems);
 });
