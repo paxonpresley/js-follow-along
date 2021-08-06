@@ -51,7 +51,7 @@ const menu = [
 ];
 
 const itemsContainer = document.querySelector('.items-container');
-const fiterBtns = document.querySelectorAll('filter-btn');
+const filterBtns = document.querySelectorAll('.filter-btn');
 
 // todo: when the page loads you need the items to display themselves in the correct divs
 // * window variable means the entire page. then a addEventListener listens for whatever the next command is (- ex: DOMContentLoaded or click within parenthesis -)
@@ -59,9 +59,9 @@ const fiterBtns = document.querySelectorAll('filter-btn');
 window.addEventListener('DOMContentLoaded', function(){
         // !new code using the global function: (syntax : name of function + array u want to cycle through)
         displayProducts(menu);
-        if(displayProducts == null) {
+        if(displayProducts == undefined) {
             return console.error('no menu');
-        }
+        };
 
     // console.log('sfdasfda');
     // * let means it's able to change it's value. next is the name you want to call it, the menu is the array you want to take data from, j
@@ -107,3 +107,12 @@ function displayProducts(menuProducts) {
     displayItems = displayItems.join("")
     itemsContainer.innerHTML = displayItems;
 };
+
+//  todo: filter items. before setting any event listeners you need to set up a .foreach to target singular btns 
+filterBtns.forEach(function(filterBtn){
+    // * now add a eventlistener
+    filterBtn.addEventListener('click', function(e){
+        // ! currentTarget.dataset is going to allow you to set a data value to an html element. in this case it's set to a button event
+        console.log(e.currentTarget.dataset.category);
+    });
+});
