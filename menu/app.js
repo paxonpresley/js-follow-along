@@ -73,8 +73,12 @@ const btnContainer = document.querySelector('.btn-container');
 
 window.addEventListener('DOMContentLoaded', function(){
         // !new code using the global function: (syntax : name of function + array u want to cycle through)
+
+
         displayProducts(menu);
         displayBtns();
+
+
               // const categories = menu.reduce(function(values,item){
         //     // *the ! means if its not equivilent to values
         //     if(!values.includes(item.category)){
@@ -84,7 +88,7 @@ window.addEventListener('DOMContentLoaded', function(){
         // },['all'])
       
     // console.log('sfdasfda');
-    // * let means it's able to change it's value. next is the name you want to call it, the menu is the array you want to take data from, j
+    // let means it's able to change it's value. next is the name you want to call it, the menu is the array you want to take data from, j
     // let displayItems = menu.map(function(info) {
     //     // console.log(info);
     //     // ! OK BIG FUCKIN REALIZATION: don't use single quotes in this type of function use the ``     apperently '' is different then `` i just wasted 30mins trying to figure this shit out
@@ -109,6 +113,26 @@ window.addEventListener('DOMContentLoaded', function(){
     // itemsContainer.innerHTML = displayItems;
 });
 
+// todo: take everything that's in the function above and put it here so it can be a global function
+function displayProducts(menuProducts) {
+            // * so you want to change the menu array to the param you set so that it can be flexible in where you put the function { menu -> menuProducts } so then you can take this function and set the array to which one you want
+    let displayItems = menuProducts.map(function(info) {
+        return `<article class="menu-item">
+        <img src="${info.img}" class="photo">
+        <div class="item-info">
+            <header class="item-info-header">
+                <h4>${info.title}</h4>
+                <h4 class="price">$${info.price}</h4>
+            </header>
+            <p class="item-text">${info.desc}</p>
+        </div>
+    </article>`;
+    });
+    displayItems = displayItems.join("");
+    // * items container specifies the div, innerhtml returns the function, the function adds the article
+    itemsContainer.innerHTML = displayItems;
+};
+
 // todo: make a function that adds a button if a new category is added
 function displayBtns() {
     const categories = menu.reduce( function (values,item) {
@@ -126,6 +150,7 @@ function displayBtns() {
     btnContainer.innerHTML = categoryBtns;
     const filterBtns = document.querySelectorAll('.filter-btn');
 
+    //  todo: filter items. before setting any event listeners you need to set up a .foreach to target singular btns 
     filterBtns.forEach(function(filterBtn){
         // * now add a eventlistener
         filterBtn.addEventListener('click', function(e){
@@ -149,25 +174,3 @@ function displayBtns() {
         });
     });
 };
-
-// todo: take everything that's in the function above and put it here so it can be a global function
-function displayProducts(menuProducts) {
-            // * so you want to change the menu array to the param you set so that it can be flexible in where you put the function { menu -> menuProducts } so then you can take this function and set the array to which one you want
-    let displayItems = menuProducts.map(function(info) {
-        return `<article class="menu-item">
-        <img src="${info.img}" class="photo">
-        <div class="item-info">
-            <header class="item-info-header">
-                <h4>${info.title}</h4>
-                <h4 class="price">$${info.price}</h4>
-            </header>
-            <p class="item-text">${info.desc}</p>
-        </div>
-    </article>`;
-    });
-    displayItems = displayItems.join("");
-    // * items container specifies the div, innerhtml returns the function, the function adds the article
-    itemsContainer.innerHTML = displayItems;
-};
-
-//  todo: filter items. before setting any event listeners you need to set up a .foreach to target singular btns 
