@@ -13,7 +13,7 @@ const menu = [
         title: "Green Tea",
         category: "tea",
         price: 1.00,
-        img: "./assets/tea.jpeg.jpeg",
+        img: "./assets/tea.jpeg",
         desc: 'akfjah;dkfjhadlkf adfkjhald fadhfl askjdfhlas dflka dlkfjhasldjhfsd',
     },
     {
@@ -72,7 +72,10 @@ window.addEventListener('DOMContentLoaded', function(){
         </div>
     </article>`;
     });
-    // todo: you want this function to be one string so that no matter how many items are added this will run, this works by being applied to the menu items container. the JOIN method is how we do that
-    displayItems = displayItems.join
-     console.log(displayItems);
+    // todo: you want this function to be one string so that no matter how many items are added this will run, this works by being applied to the menu items container. the JOIN method is how we do that. 
+    displayItems = displayItems.join("")
+    //  console.log(displayItems);
+
+    // * this adds all that code to the itemcontainer
+    itemsContainer.innerHTML = displayItems;
 });
