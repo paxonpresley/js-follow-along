@@ -57,8 +57,21 @@ const itemsContainer = document.querySelector('.items-container');
 window.addEventListener('DOMContentLoaded', function(){
     // console.log('sfdasfda');
     // * let means it's able to change it's value. next is the name you want to call it, the menu is the array you want to take data from, j
-    let displayItems = menu.map( function (info) {
-        console.log(info.title);
+    let displayItems = menu.map(function(info) {
+        // console.log(info);
+        // ! OK BIG FUCKIN REALIZATION: don't use single quotes in this type of function use the ``     apperently '' is different then `` i just wasted 30mins trying to figure this shit out
+        return `<article class="menu-item">
+        <img src="${info.img}" class="photo">
+        <div class="item-info">
+            <header class="item-info-header">
+                <h4>${info.title}</h4>
+                <h4 class="price">$${info.price}</h4>
+            </header>
+            <p class="item-text">${info.desc}</p>
+        </div>
+    </article>`;
     });
-    console.log(displayItems);
+    // todo: you want this function to be one string so that no matter how many items are added this will run, this works by being applied to the menu items container. the JOIN method is how we do that
+    displayItems = displayItems.join
+     console.log(displayItems);
 });
