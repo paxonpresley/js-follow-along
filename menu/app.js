@@ -18,7 +18,7 @@ const menu = [
     },
     {
         id: 3,
-        title: " Orange Juice",
+        title: "Orange Juice",
         category: "juice",
         price: 8.00,
         img: "./assets/juice.jpeg",
@@ -57,8 +57,8 @@ const itemsContainer = document.querySelector('.items-container');
 window.addEventListener('DOMContentLoaded', function(){
     // console.log('sfdasfda');
     // * let means it's able to change it's value. next is the name you want to call it, the menu is the array you want to take data from, j
-    let displayItems = menu.map(function(item){
-        // console.log(item);
+    let displayItems = menu.map( function (info) {
+        console.log(info.title);
     });
-    // console.log(displayItems);
+    console.log(displayItems);
 });
