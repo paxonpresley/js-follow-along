@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+#btn {
+    background-color: rgb(236, 236, 236);
+    height: 4rem;
+    width: 4rem;
+    border-color: rgb(54, 54, 54);
+    border-radius: 1rem;
+    box-shadow: .06rem .06rem .2rem rgb(82, 82, 82);
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-color: rgb(82, 82, 82);
+    border-color: rgb(238, 238, 238);
+    
+}
