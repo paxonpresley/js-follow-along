@@ -9,20 +9,19 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    <main>
-        <div class="vid-container">
-        <video muted autoplay loop id="video">
-            <source src="./assets/video.mp4" type="video/mp4">
-        </video>
-    </div>
-    
-        <h1 class="title">Sand Dunes</h1>
-        
-        <button class="switch-btn">
-            <span>Play</span>
-            <span>Pause</span>
-            <span class="switch"></span>
-        </button>
-    </main>
+    <!-- <div class="preloader">
+        <img src="./assets/preloader.gif" id="preloader-img">
+    </div> -->
+    <video muted autoplay loop id="video">
+        <source src="./assets/video.mp4" type="video/mp4">
+    </video>
+        <div class="container">
+            <h1 class="title">Sand Dunes</h1>
+            <button class="switch-btn">
+                <span>Play</span>
+                <span>Pause</span>
+                <span class="switch"></span>
+            </button>
+        </div>
 </body>
 </html>
