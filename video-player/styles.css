@@ -58,15 +58,16 @@ body {
     font-family: var(--ff-secondary);
 }
 
-header {
-    display: grid;
-    position: relative;
-    place-items: center;
+vid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-#video {
-    display: block;
-    object-fit: fill;
-    height: 100%;
-    width: 100%;
+header #video {
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
 }
