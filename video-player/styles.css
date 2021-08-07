@@ -57,6 +57,7 @@
 body {
     font-family: var(--ff-secondary);
     overflow: hidden;
+
 }
 
 /* .preloader {
@@ -78,18 +79,26 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
+    filter: brightness(70%);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
 }
 
 .title {
     position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-size: 30pt;
+    font-family: var(--ff-primary);
+    letter-spacing: var(--spacing);
+    color: white;
 }
 
-.switch-btn {
+.btn-container {
+    height: fit-content;
     position: relative;
-    margin-bottom: 5%;
 }
