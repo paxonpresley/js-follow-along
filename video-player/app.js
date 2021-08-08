@@ -10,7 +10,9 @@ window.onload = function() {
 btn.addEventListener('click', function(){
     if(!video.paused) {
         video.pause();
+        btn.classList.add('paused');
     } else {
         video.play();
+        btn.classList.remove('paused');
     };
 });
