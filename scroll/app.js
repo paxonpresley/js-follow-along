@@ -8,6 +8,14 @@ const date = document.getElementById('date');
 date.innerHTML = new Date().getFullYear();
 
 // ********** close links ************
+// ur looking for 3 different elements, the toggle btn, the links, and links container
+const navToggle = document.querySelector('.nav-toggle');
+const linksContainer = document.querySelector('.links-container');
+const links = document.querySelector('.links');
+// by default the links container is hidden, you need to create a fundtion that shows them when the btn is clicked
+navToggle.addEventListener("click", function() {
+    linksContainer.classList.toggle('.show-links');
+});
 
 // ********** fixed navbar ************
 
