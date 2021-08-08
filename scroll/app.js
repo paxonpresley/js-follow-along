@@ -15,6 +15,8 @@ const links = document.querySelector('.links');
 // by default the links container is hidden, you need to create a fundtion that shows them when the btn is clicked
 navToggle.addEventListener("click", function() {
     // linksContainer.classList.toggle('.show-links'); not good if you need a dynamic nav bar
+    const containerHeight = linksContainer.getBoundingClientRect();
+    console.log(container);
 });
 
 // ********** fixed navbar ************
