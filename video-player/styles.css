@@ -99,7 +99,7 @@ body {
     position: relative;
 }
 
-.btn-container #btn {
+.btn-container .btn {
         background-color: rgb(236, 236, 236);
         height: 4rem;
         width: 4rem;
@@ -110,8 +110,25 @@ body {
         transition-duration: 0.7s;
 }
 
-.btn-container #btn:hover {
+.btn-container .btn:hover {
     cursor: pointer;
     background-color: rgba(51, 51, 51, 0.60);
     border-color: rgb(238, 238, 238);
+}
+
+.paused {
+        background-color: rgb(255, 221, 221);
+        height: 4rem;
+        width: 4rem;
+        border-color: rgb(255, 167, 167);
+        border-radius: 1rem;
+        box-shadow: .06rem .06rem .2rem rgb(99, 48, 48);
+        transition: ease;
+        transition-duration: 0.7s;
+}
+
+.paused:hover {
+    cursor: pointer;
+    background-color: rgba(87, 33, 33, 0.6);
+    border-color: rgb(233, 214, 214);
 }

@@ -1,6 +1,6 @@
-const preloader = document.querySelector('preloader');
-const btn = document.getElementById('#btn');
-const video = document.querySelector('.vid-container');
+const preloader = document.querySelector('.preloader');
+const btn = document.querySelector('.btn');
+const video = document.getElementById('.video');
 
 // preloader
 window.onload = function() {
@@ -8,5 +8,10 @@ window.onload = function() {
 };
 
 btn.addEventListener('click', function(){
-    
-})
+    if(!video.paused) {
+        btn.classList.add('.paused');
+        video.pause();
+    } else {
+        video.play();
+    }
+});
