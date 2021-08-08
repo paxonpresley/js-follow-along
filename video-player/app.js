@@ -1,6 +1,6 @@
 const preloader = document.querySelector('.preloader');
 const btn = document.querySelector('.btn');
-const video = document.getElementById('.video');
+const video = document.getElementById('video');
 
 // preloader
 window.onload = function() {
