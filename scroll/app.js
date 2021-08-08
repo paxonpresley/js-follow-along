@@ -27,6 +27,18 @@ navToggle.addEventListener("click", function() {
     };
 });
 // ********** fixed navbar ************
-
+// todo: when you scroll past the height of the nav it pops up smoothly at the top. 1. add an eventListener set to scroll. 2. add function that when the page is scrolled so far you add a classList of '.fixed-nav' to the correct element.
+const navbar = document.getElementById('nav');
+const topLink = document.getElementById('top-link');
+window.addEventListener('scroll', function() {
+    // console.log(window.pageYOffset);
+    const scrollHeight = window.pageYOffset;
+    const navHeight = navbar.getBoundingClientRect().height;
+    if(scrollHeight > navHeight) {
+        navbar.classList.add('.fixed-nav');
+    } else {
+        navbar.classList.remove('.fixed-nav');
+    }
+});
 // ********** smooth scroll ************
 // select links
