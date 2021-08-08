@@ -276,7 +276,8 @@ nav {
     display: none;
   }
   .links-container {
-    height: auto !important;
+      /* didnt know this but !important can override inline txt */
+    height: auto !important; 
   }
   .links {
     display: flex;

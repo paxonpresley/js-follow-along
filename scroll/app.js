@@ -15,10 +15,17 @@ const links = document.querySelector('.links');
 // by default the links container is hidden, you need to create a fundtion that shows them when the btn is clicked
 navToggle.addEventListener("click", function() {
     // linksContainer.classList.toggle('.show-links'); not good if you need a dynamic nav bar
-    const containerHeight = linksContainer.getBoundingClientRect();
-    console.log(container);
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    const linksHeight = links.getBoundingClientRect().height;
+    // console.log(linksHeight);
+    // * how this works: WHEN THE TOGGLE IS CLICKED the const's grab the height of the parent and the child elements from the html, then we check if the height is 0, if so then give it enough height, if it's been given height then take away that height.
+    // didnt know this but !important can override inline txt but inline txt can override general css
+    if(containerHeight === 0) {
+        linksContainer.style.height = `${linksHeight}px`;
+    } else {
+        linksContainer.style.height = 0;
+    };
 });
-
 // ********** fixed navbar ************
 
 // ********** smooth scroll ************
