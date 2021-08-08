@@ -9,9 +9,11 @@ window.onload = function() {
 
 btn.addEventListener('click', function(){
     if(!video.paused) {
+        // console.log('it paused');
         video.pause();
         btn.classList.add('paused');
     } else {
+        // console.log('its playing');
         video.play();
         btn.classList.remove('paused');
     };
