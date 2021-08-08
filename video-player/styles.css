@@ -101,14 +101,14 @@ body {
 }
 
 .btn {
-        background-color: rgb(220, 235, 220);
-        height: 4rem;
-        width: 4rem;
-        border-color: rgb(220, 235, 220);
-        border-radius: 1rem;
-        box-shadow: .06rem .06rem .2rem rgb(12, 58, 12);
-        transition: ease;
-        transition-duration: 0.3s;
+    background-color: rgb(220, 235, 220);
+    height: 4rem;
+    width: 4rem;
+    border-color: rgb(220, 235, 220);
+    border-radius: 1rem;
+    box-shadow: .06rem .06rem .2rem rgb(12, 58, 12);
+    transition: ease;
+    transition-duration: 0.3s;
 }
 
 .btn:hover {
