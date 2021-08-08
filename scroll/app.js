@@ -2,7 +2,6 @@
 // pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
 // slice extracts a section of a string without modifying original string
 //offsetTop - A Number, representing the top position of the element, in pixels
-
 // ********** set date ************
 const date = document.getElementById('date');
 date.innerHTML = new Date().getFullYear();
@@ -27,17 +26,24 @@ navToggle.addEventListener("click", function() {
     };
 });
 // ********** fixed navbar ************
-// todo: when you scroll past the height of the nav it pops up smoothly at the top. 1. add an eventListener set to scroll. 2. add function that when the page is scrolled so far you add a classList of '.fixed-nav' to the correct element.
+// todo: when you scroll past the height of the nav it pops up smoothly at the top. 1. add an eventListener set to scroll. 2. add function that when the page is scrolled so far you add a classList of '.fixed-nav' to the correct element. 3. now you want another function that at a certain scroll point you want to show the back to top btn.
 const navbar = document.getElementById('nav');
-const topLink = document.getElementById('top-link');
+const topLink = document.querySelector('.top-link');
+
 window.addEventListener('scroll', function() {
     // console.log(window.pageYOffset);
     const scrollHeight = window.pageYOffset;
     const navHeight = navbar.getBoundingClientRect().height;
-    if(scrollHeight > navHeight) {
+    if (scrollHeight > navHeight) {
         navbar.classList.add('.fixed-nav');
     } else {
         navbar.classList.remove('.fixed-nav');
+    }
+    // this is the if else function that we needed in step 3
+    if (scrollHeight < 500) {
+        topLink.classList.add('.show-link');
+    } else {
+        topLink.classList.remove('.show-link');
     }
 });
 // ********** smooth scroll ************
