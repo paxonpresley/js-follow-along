@@ -1,5 +1,7 @@
-// const preloader = document.querySelector('preloader');
+const preloader = document.querySelector('preloader');
 
-// window.onload = function() {
-//     preloader.classList.add('.hide-preloader');
-// };
+// preloader
+window.onload = function() {
+    document.querySelector('.preloader').style.display = "none";
+};
+
