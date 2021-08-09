@@ -48,3 +48,10 @@ window.addEventListener('scroll', function() {
 });
 // ********** smooth scroll ************
 // select links
+const scrollLinks = document.querySelectorAll('.scroll-link');
+scrollLinks.forEach(function(link) { // 'link' is a param that you can access through the function
+    link.addEventListener('click', function(e){
+        // preventDefault means it stops the original functionality so you can program your own functionality
+        e.preventDefault();
+    });
+});
