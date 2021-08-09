@@ -40,10 +40,10 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('.fixed-nav');
     }
     // this is the if else function that we needed in step 3
-    if (scrollHeight < 500) {
-        topLink.classList.add('.show-link');
+    if (scrollHeight > 1000) {
+        topLink.classList.add('show-link');
     } else {
-        topLink.classList.remove('.show-link');
+        topLink.classList.remove('show-link');
     }
 });
 // ********** smooth scroll ************
