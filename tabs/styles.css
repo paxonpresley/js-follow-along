@@ -113,13 +113,17 @@ html, body {
     margin: 0;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .about .tab-btn {
     padding: .3rem;
     margin: 0;
-    width: 6rem;
-    background-color: var(--clr-grey-4);
-    border-width: .05rem;
-    border-color: var(--clr-grey-2);
+    width: 100%;
+    background-color: var(--clr-grey-2);
     border: none;
 }
 
@@ -132,7 +136,7 @@ html, body {
 .tab-btn.active {
     padding: .3rem;
     margin: 0;
-    width: 6rem;
+    width: 100%;
     background-color: var(--clr-grey-3);
     border-width: 0rem;
     border-color: var(--clr-grey-10);
