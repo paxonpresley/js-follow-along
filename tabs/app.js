@@ -13,6 +13,12 @@ about.addEventListener('click', function(e){
             btn.classList.remove('active');
             e.target.classList.add('active');
         });
+         // * this function means that upon click, for all my content that goes with the btn, disregard the class that shows any of them. (after this function then we will re-add the style that shows it with diff conditions)
+        articles.forEach(function(article){
+            article.classList.remove('active');  
+    });
+    // * this function is saying that since the topic has been declared as there then get this element that goes by the same name. declare that variable and add the style that shows it
+    const topicArticle = document.getElementById(topic);
+    topicArticle.classList.add('active');
     }
-    
 });
