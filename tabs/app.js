@@ -5,5 +5,7 @@ const tabBtns = document.querySelectorAll('.tab-btn');
 const articles = document.querySelectorAll('.content');
 
 about.addEventListener('click', function(e){
-    console.log(e.target);
+    // console.log(e.target.dataset.topic);
+    const topic = e.target.dataset.topic;
+    
 });
