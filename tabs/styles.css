@@ -140,8 +140,6 @@ html, body {
     background-color: var(--clr-grey-3);
     border-width: 0rem;
     border-color: var(--clr-grey-10);
-    touch-action: none;
-    pointer-events: none;
 }
 .tab-btn.active:hover {
     background-color: var(--clr-grey-3);
