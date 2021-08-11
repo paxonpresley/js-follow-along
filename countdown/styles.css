@@ -56,3 +56,17 @@ html, body {
     width: 100vw;
     box-sizing: border-box;
 }
+
+.hero-container {
+    /* background-color: var(--clr-grey-8); */
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hero-container img {
+  height: 100%;
+}
+
