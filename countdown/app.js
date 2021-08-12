@@ -27,3 +27,6 @@ const weekdays = [
 const giveawayDate = document.querySelector('.giveaway-date');
 const timerContainer = document.querySelector('.timer-container');
 const boxH5 = document.querySelectorAll('.box h5');
+console.log(boxH5);
+var giveawayDate = new Date(2022, 10, 17, 30);
+console.log(giveawayDate);
