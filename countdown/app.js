@@ -25,3 +25,5 @@ const weekdays = [
 ];
 
 const giveawayDate = document.querySelector('.giveaway-date');
+const timerContainer = document.querySelector('.timer-container');
+const boxH5 = document.querySelectorAll('.box h5');
