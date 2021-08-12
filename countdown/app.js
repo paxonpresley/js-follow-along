@@ -24,4 +24,4 @@ const weekdays = [
   "Saturday",
 ];
 
-const giveawayDate = document.querySelector('.giveaway-date')
+const giveawayDate = document.querySelector('.giveaway-date');
