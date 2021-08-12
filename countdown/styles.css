@@ -120,6 +120,6 @@ p {
   align-items: center;
 }
 
-.box span {
+.box span, h5 {
   font-family: 'Courier New', Courier, monospace;
 }
