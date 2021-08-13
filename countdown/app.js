@@ -29,8 +29,15 @@ const timerContainer = document.querySelector('.timer-container');
 const boxH5 = document.querySelectorAll('.box h5');
 // console.log(boxH5);
 
+let thisDate = new Date();
+let thisYear = thisDate.getFullYear();
+let thisMonth = thisDate.getMonth();
+let thisDay = thisDate.getDate();
+
+const dateDate = new Date(thisYear, thisMonth, thisDay + 10, 10, 20, 1);
+
 //* declared giveaway date
-var dateDate = new Date('September 15, 2022 12:22:32');
+// var dateDate = new Date(dyDate);
 // console.log(giveawayDate);
 //* end declared giveaway date
 
@@ -72,24 +79,47 @@ function timeCalc (){
     const oneMinute = 60*1000;
     const oneSecond = 1000;
 
-    // * long way of doing things
-        // let days = t - oneDay;
-        // days = Math.floor(days);
-        // let hours = t % oneDay / oneHour;
-        // hours = Math.floor(hours);
+                 // * long way of doing things
+        //* let days = t - oneDay;
+        // *days = Math.floor(days);
+        // *let hours = t % oneDay / oneHour;
+        // *hours = Math.floor(hours);
         // // console.log(hours);
-        // let minutes = t % oneDay % oneHour / oneMinute;
-        // minutes = Math.floor(minutes);
-        // // console.log(minutes);
-        // let seconds = t % oneDay % oneHour % oneMinute / 1000;
-        // seconds = Math.floor(seconds);
+        //* let minutes = t % oneDay % oneHour / oneMinute;
+        //* minutes = Math.floor(minutes);
+        // *// console.log(minutes);
+        //* let seconds = t % oneDay % oneHour % oneMinute / 1000;
+        //* seconds = Math.floor(seconds);
         // // console.log(seconds);
 
-    let days = Math.floor(t - oneDay);
-    console.log(days);
+    let days = Math.floor(t / oneDay);
     let hours = Math.floor(t % oneDay / oneHour);
     let minutes = Math.floor(t % oneHour / oneMinute);
     let seconds = Math.floor(t % oneMinute / oneSecond);
+
+    // todo: set these calc valures as an array so we can attach them to their .box divs
+    const calcs = [days, hours, minutes, seconds];
+
+    function zeros (box) {
+        if(box < 10){
+          return box = `0${box}`;
+        } else {
+            return box;
+        }
+    };
+
+    boxH5.forEach(function(box,index){
+        box.innerHTML = calcs[index];
+    });
+
+    function countEnds () {
+        if(t < 0){
+            clearInterval(countdown);
+            timerContainer.innerHTML = `<h4 class="expired">Congrats! The timer is over!</h4>`;
+        }
+    };
 };
 
+// countdown
+let countdown = setInterval(timeCalc, 1000);
 timeCalc();
