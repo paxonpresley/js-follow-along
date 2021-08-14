@@ -20,9 +20,19 @@ const text = [
       e.preventDefault();
     //   to make a submit string a number use parseInt to convert
       const value = parseInt(amount.value);
-      console.log(value);
-    // todo: write a function that solves for these situations: what if a user tries to submit an empty #? what if a user inputs a negitive integer? what if a user inputs a valid #?
-    if(value == ''){
-        alert('Please input a number!')
+    //   console.log(value);
+    const randomNum = Math.floor(Math.random() * text.length);
+    // todo: write a function that solves for these situations: what if a user tries to submit an empty #? what if a user inputs a negitive integer? what if a user inputs a # higher than 9?
+    if(isNaN(value) || value < 0 || value > 9){
+        result.innerHTML = `<p class="result">${text[randomNum]}</p>`;
+        console.log('bruva');
+    }
+    else {
+        let tempText = text.slice(0,value);
+        // console.log(tempText);
+        tempText = tempText.map(function (para) {
+            return `<p class="result">${para}</p>`;
+        }) .join("");
+        result.innerHTML = tempText;
     }
   });
